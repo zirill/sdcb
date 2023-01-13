@@ -9,7 +9,7 @@ curl https://raw.githubusercontent.com/zirill/sdcb/main/cb.sh -O
 
 ### Set attribute
 ```
-chmode +x cb.sh
+chmod +x cb.sh
 ```
 
 ### add new domain
