@@ -1,7 +1,12 @@
 # sdcb
 Shell script for certbot-docker 
 
-Add domain, delete domain, renew, show list all domain, add cron, romve cron
+* add domain
+* delete domain 
+* renew 
+* show list all domain 
+* add cron 
+* romve cron
 
 
 ### Download
