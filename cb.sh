@@ -71,6 +71,8 @@ HELP script command:
   n - renew all domain
     Example: ./cb.sh n
 
+  l - show all domain
+
 
   c - add to cron this file every week
 
