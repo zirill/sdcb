@@ -10,6 +10,7 @@ fnTestDOAMIN() {
 fnADD() {
   echo "add domain: $1 "
   docker run -it --rm --name cb \
+              -v "/etc/letsencrypt:/etc/letsencrypt" \
               -v "/var/lib/letsencrypt:/var/lib/letsencrypt" \
               certbot/certbot certonly --agree-tos --register-unsafely-without-email --webroot -w /var/lib/letsencrypt/ -d "$1"
 #--expand
@@ -18,6 +19,7 @@ fnADD() {
 fnDEL() {
   echo "del domain: $1 "
   docker run -it --rm --name cb \
+              -v "/etc/letsencrypt:/etc/letsencrypt" \
               -v "/var/lib/letsencrypt:/var/lib/letsencrypt" \
               certbot/certbot delete --cert-name "$1"
 }
@@ -25,6 +27,7 @@ fnDEL() {
 fnRNEW() {
   echo "renew domain "
   docker run -it --rm --name cb \
+              -v "/etc/letsencrypt:/etc/letsencrypt" \
               -v "/var/lib/letsencrypt:/var/lib/letsencrypt" \
               certbot/certbot renew --dry-run
 
@@ -40,6 +43,7 @@ SOK="syntax is ok"
 fnLIST() {
   echo "get list domain "
   docker run -it --rm --name cb \
+              -v "/etc/letsencrypt:/etc/letsencrypt" \
               -v "/var/lib/letsencrypt:/var/lib/letsencrypt" \
               certbot/certbot certificates
 }
