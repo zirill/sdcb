@@ -29,7 +29,7 @@ fnRNEW() {
   docker run -it --rm --name cb \
               -v "/etc/letsencrypt:/etc/letsencrypt" \
               -v "/var/lib/letsencrypt:/var/lib/letsencrypt" \
-              certbot/certbot renew --dry-run
+              certbot/certbot renew --quiet
 
 SNG=$(nginx -t 2>&1)
 SOK="syntax is ok"
